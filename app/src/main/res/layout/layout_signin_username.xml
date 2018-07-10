@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/signIn_relativeLayout_mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:padding="4dp">
+
+        <ImageView
+            android:id="@+id/signIn_imageView_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@string/text_logo"
+            android:src="@color/colorPrimary" />
+
+
+        <TextView
+            android:id="@+id/signIn_textView_titulo"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signIn_imageView_logo"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Sign In"
+            android:textColor="@color/Black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/signIn_EditText_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signIn_textView_titulo"
+            android:layout_marginBottom="25dp"
+            android:hint="Username" />
+
+        <EditText
+            android:id="@+id/signIn_editText_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signIn_EditText_username"
+            android:layout_marginBottom="25dp"
+            android:hint="Password" />
+
+        <EditText
+            android:id="@+id/signIn_EditText_ConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signIn_editText_password"
+            android:layout_marginBottom="25dp"
+            android:hint="Confirm Password" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signIn_EditText_ConfirmPassword"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="25dp"
+            android:text="Next" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,6 +1,6 @@
 package com.luisro00005513.pdmparcial3.Fragments;
 
-
+import android.graphics.YuvImage;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -17,12 +17,11 @@ import android.view.ViewGroup;
 import com.luisro00005513.pdmparcial3.R;
 
 /**
- * A simple {@link Fragment} subclass.
+ * Created by UCA on 10/07/2018.
  */
-public class Store_buy extends Fragment {
 
-
-    private static final int NUM_PAGES = 3;
+public class Fragment_Home extends Fragment {
+    private static final int NUM_PAGES = 2;
     //viewPager widget
     private ViewPager mPager;
     //pager adapter, provee las paginas al view pager widget
@@ -38,20 +37,18 @@ public class Store_buy extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.layout_fragment_store, container, false);
+        View view = inflater.inflate(R.layout.layout_frament_home, container, false);
         // Instantiate a ViewPager and a PagerAdapter.
         //======================todos sobre el tab====================
         //========================================
         TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tabLayout);
-        tabLayout.addTab(tabLayout.newTab().setText("Auction"));
-        tabLayout.addTab(tabLayout.newTab().setText("Buy"));
-        tabLayout.addTab(tabLayout.newTab().setText("Exchange"));
-
+        tabLayout.addTab(tabLayout.newTab().setText("Yu-Gi-Oh"));
+        tabLayout.addTab(tabLayout.newTab().setText("Magi"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         //codigo para viewpager
         mPager = (ViewPager) view.findViewById(R.id.viewPagerHome);
-        mPagerAdapter = new Store_buy.ScreenSlidePagerAdapter(getChildFragmentManager());
+        mPagerAdapter = new ScreenSlidePagerAdapter(getChildFragmentManager());
         mPager.setAdapter(mPagerAdapter);
 
         mPager.setOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
@@ -82,14 +79,11 @@ public class Store_buy extends Fragment {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    Store_auction tab1 = new Store_auction();
+                    Home_YGH tab1 = new Home_YGH();
                     return tab1;
                 case 1:
-                    Store_BuyCard tab2 = new Store_BuyCard();
+                    Home_Magi tab2 = new Home_Magi();
                     return tab2;
-                case 2:
-                    Store_Transfer tab3 = new Store_Transfer();
-                    return tab3;
 
                 default:
                     return null;
@@ -106,5 +100,4 @@ public class Store_buy extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
-
 }

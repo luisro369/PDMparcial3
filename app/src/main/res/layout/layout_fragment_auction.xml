@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.example.uca.pantallas.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Carta en subasta"
+        android:gravity="center"
+        android:layout_margin="8dp"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textColor="#000"/>
+
+
+    <LinearLayout
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:background="@drawable/btn_bg"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_account"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nombreCartaS"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:textColor="#000"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quality: "
+                    android:textSize="16sp"
+                    android:textColor="#000"/>
+
+                <TextView
+                    android:id="@+id/estadoS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nueva"
+                    android:textStyle="italic"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type: "
+                    android:textSize="16sp"
+                    android:textColor="#000"/>
+
+                <TextView
+                    android:id="@+id/tipoS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Comun"
+                    android:textStyle="italic"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Album: "
+                    android:textSize="16sp"
+                    android:textColor="#000"/>
+
+                <TextView
+                    android:id="@+id/albumS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="album"
+                    android:textStyle="italic"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description: "
+                    android:textSize="16sp"
+                    android:textColor="#000"/>
+
+                <TextView
+                    android:id="@+id/descripcionS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Desc"
+                    android:textStyle="italic"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="8dp">
+
+        <LinearLayout
+
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="8dp"
+            android:padding="20dp"
+            android:background="@drawable/bt_bg">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hora de inicio:"
+                android:gravity="center"
+                android:textColor="#000"/>
+
+            <TextView
+                android:layout_margin="8dp"
+                android:id="@+id/horaInicio"
+                android:paddingRight="16dp"
+                android:paddingLeft="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="9:20 PM"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:background="@drawable/btn_bg"
+                android:backgroundTint="@color/colorPrimary"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hora de fin:"
+                android:gravity="center"
+                android:textColor="#000"/>
+
+            <TextView
+                android:layout_margin="8dp"
+                android:id="@+id/horaFin"
+                android:paddingRight="16dp"
+                android:paddingLeft="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="10:20 PM"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:background="@drawable/btn_bg"
+                android:backgroundTint="@color/colorPrimary"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="8dp"
+            android:padding="20dp"
+            android:background="@drawable/bt_bg">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mi propuesta"
+                android:gravity="center"
+                android:textColor="#000"/>
+
+            <EditText
+                android:layout_margin="8dp"
+                android:id="@+id/precio"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:inputType="numberDecimal"
+                android:background="@drawable/btn_bg"/>
+
+
+            <Button
+                android:id="@+id/send"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="Send"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_bg"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="#fff"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
