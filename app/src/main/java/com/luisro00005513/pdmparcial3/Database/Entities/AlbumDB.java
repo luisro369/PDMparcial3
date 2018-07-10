@@ -18,10 +18,10 @@ public class AlbumDB {
     @ColumnInfo (name="IdAlbum")
     private long idAlbum;
 
-    @ColumnInfo (name = "NombreAlbum")
-    private String nombreAlbum;
-    @ColumnInfo (name ="IdJuego")
-    private long IdJuego;
+    @ColumnInfo (name = "albumname")
+    private String albumName;
+    @ColumnInfo (name ="game")
+    private String game;
 
     @NonNull
     public long getIdAlbum() {
@@ -32,19 +32,19 @@ public class AlbumDB {
         this.idAlbum = idAlbum;
     }
 
-    public String getNombreAlbum() {
-        return nombreAlbum;
+    public String getAlbumName() {
+        return albumName;
     }
 
-    public void setNombreAlbum(String nombreAlbum) {
-        this.nombreAlbum = nombreAlbum;
+    public void setNombreAlbum(String albumName) {
+        this.albumName = albumName;
     }
 
-    public long getIdJuego() {
-        return IdJuego;
+    public String getGame() {
+        return game;
     }
 
-    public void setIdJuego(long idJuego) {
-        IdJuego = idJuego;
+    public void setGame(String gamename) {
+        game = gamename;
     }
 }
