@@ -39,6 +39,16 @@ public class CardDB {
     @ColumnInfo(name = "base_price")
     private String BasePrice;
 
+    public CardDB() {
+    }
+
+    public CardDB(String cardTitle, String cardType, String cardDesc, String cardImage) {
+        CardTitle = cardTitle;
+        CardImage = cardImage;
+        CardDesc = cardDesc;
+        CardType = cardType;
+    }
+
     public Long getCardId() {
         return CardId;
     }

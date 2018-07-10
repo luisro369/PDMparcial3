@@ -82,7 +82,7 @@ public class Store_buy extends Fragment {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    Store_auction tab1 = new Store_auction();
+                    CardAuctionFragment tab1 = new CardAuctionFragment();
                     return tab1;
                 case 1:
                     Store_BuyCard tab2 = new Store_BuyCard();
