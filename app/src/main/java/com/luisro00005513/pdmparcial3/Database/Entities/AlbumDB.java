@@ -47,4 +47,8 @@ public class AlbumDB {
     public void setGame(String gamename) {
         game = gamename;
     }
+
+    public void setAlbumName(String albumName) {
+        this.albumName = albumName;
+    }
 }
