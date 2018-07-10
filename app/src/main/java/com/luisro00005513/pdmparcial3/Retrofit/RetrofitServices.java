@@ -10,9 +10,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class RetrofitServices{
-    //public static final String BASE_URL = "http://localhost:3000";
-    //public static final String BASE_URL = "http://192.168.0.28:3000";//wifi
-    //public static final String BASE_URL = "http://192.168.0.46:3000";//cable ethernet
     public static final String BASE_URL = "https://xover-api.herokuapp.com";
 
     public RetrofitService conectar(){
