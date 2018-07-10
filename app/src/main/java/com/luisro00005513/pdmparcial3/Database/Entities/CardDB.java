@@ -31,16 +31,6 @@ public class CardDB {
     @ColumnInfo(name = "state")
     private String CardState;
 
-    public CardDB(Long cardId, String cardTitle, String cardImage, String cardDesc, Long idAlbum, String cardType, String cardState) {
-        CardId = cardId;
-        CardTitle = cardTitle;
-        CardImage = cardImage;
-        CardDesc = cardDesc;
-        IdAlbum = idAlbum;
-        CardType = cardType;
-        CardState = cardState;
-    }
-
     public Long getCardId() {
         return CardId;
     }
