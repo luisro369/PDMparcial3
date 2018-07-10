@@ -6,7 +6,6 @@ import android.os.Bundle;
 
 import com.luisro00005513.pdmparcial3.ViewModels.AppViewModel;
 
-
 public class MainActivity extends AppCompatActivity {
     AppViewModel viewModel;
 
@@ -14,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         viewModel = ViewModelProviders.of(this).get(AppViewModel.class);
 
