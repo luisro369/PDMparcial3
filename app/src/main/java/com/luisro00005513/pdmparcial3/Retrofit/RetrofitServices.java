@@ -23,7 +23,6 @@ public class RetrofitServices{
 
     public void conectar(){
         //--------------conexion retrofit--------------------
-
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(new Interceptor() {
             @Override
             public okhttp3.Response intercept(Chain chain) throws IOException {
