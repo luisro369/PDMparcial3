@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PDMparcial3</string>
+    <string name="app_name">Mobile Deck</string>
     <string name="text_log_in">LOG IN</string>
     <string name="text_hint_username">Username</string>
     <string name="text_hint_password">Password</string>
