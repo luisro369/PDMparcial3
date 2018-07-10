@@ -3,4 +3,8 @@
 
     <corners android:radius="2dp"/>
 
+    <solid android:color="@android:color/transparent"/>
+
+    <corners android:radius="2dp"/>
+
 </shape>
