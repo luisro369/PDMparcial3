@@ -31,6 +31,9 @@ public class CardDB {
     @ColumnInfo(name = "state")
     private String CardState;
 
+    @ColumnInfo(name = "precio")
+    private String Precio;
+
     public Long getCardId() {
         return CardId;
     }
