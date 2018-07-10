@@ -1,8 +1,7 @@
 package com.luisro00005513.pdmparcial3.Retrofit;
 
 /**
- * {@link RetrofitService}
- * Métodos a utilizar para obtener datos de la API
+ * Created by luisro on 7/10/18.
  */
 
 //===========Esta interface nos va a ayudar con retrofit======
