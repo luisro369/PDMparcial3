@@ -37,6 +37,65 @@ public class CardApi {
     @Expose
     private String quality;
 
+    //constructor
 
 
+
+
+    //======setter & getters==============
+    public String get_Id() {
+        return _Id;
+    }
+
+    public void set_Id(String _Id) {
+        this._Id = _Id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String get_id_album() {
+        return _id_album;
+    }
+
+    public void set_id_album(String _id_album) {
+        this._id_album = _id_album;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getQuality() {
+        return quality;
+    }
+
+    public void setQuality(String quality) {
+        this.quality = quality;
+    }
 }
