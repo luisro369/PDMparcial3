@@ -5,11 +5,14 @@ import android.app.Application;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.luisro00005513.pdmparcial3.Retrofit.Models.CardApi;
 import com.luisro00005513.pdmparcial3.Retrofit.Models.LoginApi;
+import com.luisro00005513.pdmparcial3.Retrofit.Models.UserApi;
 import com.luisro00005513.pdmparcial3.Retrofit.RetrofitService;
 import com.luisro00005513.pdmparcial3.Retrofit.RetrofitServices;
 
 import java.io.IOException;
+import java.util.List;
 
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
@@ -66,5 +69,32 @@ public class AppRepository {
         });
         return token;
     }//getToken
+
+    //=================metodo para extraer todos los usuarios=============================
+    public List<UserApi> getUsers(){
+        Call<List<UserApi>> call = retrofitServices.getRetrofitService().getUsers();
+        List<UserApi> listUsers = null;
+        try {
+            listUsers = call.execute().body();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return listUsers;
+    }
+
+
+    //=================metodo para extraer todos los cards=============================
+    public List<CardApi> getCards(){
+        Call<List<CardApi>> call = retrofitServices.getRetrofitService().getCards();
+        List<CardApi> listCards = null;
+        try {
+            listCards = call.execute().body();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return listCards;
+    }
+
+
 
 }
