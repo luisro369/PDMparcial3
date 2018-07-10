@@ -62,5 +62,6 @@ public class AuctionDB {
 
     public void setAuctionWinnerId(Long auctionWinnerId) {
         AuctionWinnerId = auctionWinnerId;
+
     }
 }
