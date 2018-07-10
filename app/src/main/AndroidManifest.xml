@@ -11,14 +11,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".StepperLayout.Stepper"></activity>
+=======
+        <activity android:name=".MainActivity">
+
+        </activity>
+>>>>>>> 97f515abd941b33970cf2626043394f0a8e19df1
     </application>
 
 </manifest>
