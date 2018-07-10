@@ -21,16 +21,16 @@ import retrofit2.http.POST;
 public interface RetrofitService {
     //metodo para poder logearme a la api
     @POST("/login")
-    public Call<LoginApi> getToken(@Body LoginApi login);
+    public Single<LoginApi> getToken(@Body LoginApi login);
 
 
     //metodo para poder extraer usuarios de la api
     @GET("/users")
-    public Call<List<UserApi>> getUsers();
+    public Single<List<UserApi>> getUsers();
 
     //metodo para poder extraer Cartas de la api
     @GET("/users")
-    public Call<List<CardApi>> getCards();
+    public Single<List<CardApi>> getCards();
 
 
 }

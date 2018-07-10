@@ -29,7 +29,7 @@ public interface AlbumDAO {
     void DeleteAllAlbums();
 
     @Delete
-    void delete(AlbumDB albumDB);
+    void delete(AlbumDB... albumDB);
 
     @Update
     void update(AlbumDB... albumDB);
@@ -38,8 +38,6 @@ public interface AlbumDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertAlbums(List<AlbumDB> albums);
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insertAlbums(AlbumDB... albums);
 
     @Query("SELECT * FROM AlbumDB WHERE game = :gamename")
     Flowable<List<AlbumDB>> getAlbumbyGame(String gamename);
@@ -48,6 +46,6 @@ public interface AlbumDAO {
     Single<AlbumDB> getAlbumbyName(String albumname);
 
     @Query("SELECT * FROM AlbumDB WHERE _id = :idalbum")
-    Single<AlbumDB> getAlbumbyId (String idalbum);
+    Single<AlbumDB> getAlbumbyId (long idalbum);
 
 }
