@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">PDMparcial3</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_log_in">LOG IN</string>
+    <string name="text_hint_username">Username</string>
+    <string name="text_hint_password">Password</string>
+    <string name="text_logo">Logo</string>
+    <string name="text_or">OR</string>
+    <string name="text_don_t_have_an_account">Don\'t have an account? Sign in now!</string>
+    <string name="text_sign_in">Sign In</string>
 </resources>
