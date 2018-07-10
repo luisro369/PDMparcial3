@@ -28,8 +28,11 @@ public class CardDB {
     @ColumnInfo(name = "type")
     private String CardType;
 
-    @ColumnInfo(name = "state")
-    private String CardState;
+    @ColumnInfo(name = "rarity")
+    private String Rarity;
+
+    @ColumnInfo(name = "base_price")
+    private String BasePrice;
 
     public Long getCardId() {
         return CardId;
@@ -79,11 +82,19 @@ public class CardDB {
         CardType = cardType;
     }
 
-    public String getCardState() {
-        return CardState;
+    public String getRarity() {
+        return Rarity;
     }
 
-    public void setCardState(String cardState) {
-        CardState = cardState;
+    public String getBasePrice() {
+        return BasePrice;
+    }
+
+    public void setRarity(String rarity) {
+        Rarity = rarity;
+    }
+
+    public void setBasePrice(String basePrice) {
+        BasePrice = basePrice;
     }
 }

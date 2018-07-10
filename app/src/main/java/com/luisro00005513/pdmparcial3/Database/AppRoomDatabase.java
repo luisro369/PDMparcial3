@@ -18,7 +18,7 @@ import com.luisro00005513.pdmparcial3.Database.Entities.UserDB;
  * Created by UCA on 10/07/2018.
  */
 
-@Database(entities = {AlbumDB.class, CardDB.class, CollectionDB.class, UserDB.class},version = 1)
+@Database(entities = {AlbumDB.class, CardDB.class, CollectionDB.class, UserDB.class},version = 2)
 public abstract class AppRoomDatabase extends RoomDatabase {
     private static final String DB_NAME = "PDM3.db";
     private static volatile AppRoomDatabase instance;
@@ -40,6 +40,5 @@ public abstract class AppRoomDatabase extends RoomDatabase {
 
     public abstract AlbumDAO albumDAO();
     public abstract CardDAO cardDAO();
-    public abstract CollectionDAO collectionDAO();
     public abstract UserDAO userDAO();
 }
