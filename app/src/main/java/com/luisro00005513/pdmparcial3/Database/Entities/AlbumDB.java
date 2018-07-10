@@ -15,12 +15,12 @@ public class AlbumDB {
 
     @PrimaryKey
     @NonNull
-    @ColumnInfo (name="_id")
+    @ColumnInfo (name="IdAlbum")
     private long idAlbum;
 
-    @ColumnInfo (name = "nombre_album")
+    @ColumnInfo (name = "NombreAlbum")
     private String nombreAlbum;
-    @ColumnInfo (name ="id_juego")
+    @ColumnInfo (name ="IdJuego")
     private long IdJuego;
 
     @NonNull
