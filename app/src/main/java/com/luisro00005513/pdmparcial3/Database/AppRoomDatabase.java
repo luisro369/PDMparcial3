@@ -14,7 +14,7 @@ import com.luisro00005513.pdmparcial3.Database.Entities.CardDB;
 import com.luisro00005513.pdmparcial3.Database.Entities.CollectionDB;
 import com.luisro00005513.pdmparcial3.Database.Entities.UserDB;
 
-/**
+/*
  * Created by UCA on 10/07/2018.
  */
 
