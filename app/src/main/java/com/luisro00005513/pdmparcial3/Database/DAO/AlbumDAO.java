@@ -23,7 +23,7 @@ public interface AlbumDAO {
     void insert(AlbumDB... albumDB);
 
     @Query("DELETE FROM albumDB")
-    void DeleteAllCards();
+    void DeleteAllAlbum();
 
     @Delete
     void delete(AlbumDB albumDB);
