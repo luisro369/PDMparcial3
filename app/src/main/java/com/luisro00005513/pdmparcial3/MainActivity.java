@@ -21,6 +21,9 @@ import com.luisro00005513.pdmparcial3.Fragments.Store_auction;
 
 import java.util.List;
 
+import io.reactivex.Single;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+
 public class MainActivity extends AppCompatActivity {
 
     AppViewModel viewModel;
@@ -33,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+/*
         home_ygh = new Home_YGH();
         store_auction = new Store_auction();
         account_user = new Account_User();
@@ -66,16 +69,29 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-
+*/
         //===================modelo de appViewModel=======================
         viewModel = ViewModelProviders.of(this).get(AppViewModel.class);
         viewModel.token("00117716","00117716");
 
+<<<<<<< HEAD
         Thread thread = new Thread(){
             public void run(){
                 List<UserApi> listaDeUsuarios = viewModel.users();
             }//run in backgorund
         };thread.start();
+=======
+        /*Hilo principal*/
+        viewModel.users().observeOn(AndroidSchedulers.mainThread()).subscribe((userApis, throwable) -> {
+
+        });
+        /*Hilo atrás
+        viewModel.users().subscribe((userApis, throwable) -> {
+        });
+         */
+
+        //List<UserApi> listaDeUsuarios = viewModel.users();
+>>>>>>> eea8d7a96dfc95fe0c2a04c219b8675157b283ed
         //List<CardApi> listaDeCartas = viewModel.cards();
     }//on create
 

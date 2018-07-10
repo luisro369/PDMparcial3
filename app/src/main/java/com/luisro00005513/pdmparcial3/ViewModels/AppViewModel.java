@@ -9,6 +9,8 @@ import com.luisro00005513.pdmparcial3.Retrofit.Models.UserApi;
 
 import java.util.List;
 
+import io.reactivex.Single;
+
 /**
  * {@link AppViewModel}
  * Global App Repository
@@ -30,7 +32,7 @@ public class AppViewModel extends AndroidViewModel {
     }
 
     //------------------getUsers-------------------
-    public List<UserApi> users(){
+    public Single<List<UserApi>> users(){
         return mRepository.getUsers();
     }
 
