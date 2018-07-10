@@ -70,8 +70,13 @@ public class MainActivity extends AppCompatActivity {
         //===================modelo de appViewModel=======================
         viewModel = ViewModelProviders.of(this).get(AppViewModel.class);
         viewModel.token("00117716","00117716");
-        List<UserApi> listaDeUsuarios = viewModel.users();
-        List<CardApi> listaDeCartas = viewModel.cards();
+
+        Thread thread = new Thread(){
+            public void run(){
+                List<UserApi> listaDeUsuarios = viewModel.users();
+            }//run in backgorund
+        };thread.start();
+        //List<CardApi> listaDeCartas = viewModel.cards();
     }//on create
 
     private void setFrament(Fragment frament) {
