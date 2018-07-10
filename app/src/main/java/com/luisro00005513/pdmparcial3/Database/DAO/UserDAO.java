@@ -16,11 +16,11 @@ import java.util.List;
 public interface UserDAO {
     @Insert
     void insert(UserDB userRepoJoin);
-
+/*
     //Sacar las cartas de los usuarios
     @Query("SELECT CardDB.`desc`, CardDB.image,CardDB.state ,CardDB.title, CardDB.type FROM UserDB INNER JOIN CollectionDB ON UserDB._id=CollectionDB.user_id INNER JOIN CardDB ON " +
             "CardDB._id=CollectionDB.card_id WHERE  UserDB._id=:userId")
-    List<UserDB> getUsersForRepository(final int userId);
+    List<UserDB> getUsersForRepository(final int userId);*/
 
 
 }

@@ -17,9 +17,9 @@ public interface CardDAO {
 
     @Insert
     void insert(UserDB userRepoJoin);
-
+/*
     //Sacar las cartas de los usuarios
     @Query("SELECT UserDB.firstName, UserDB.lastName,UserDB.phone_number  FROM CardDB INNER JOIN CollectionDB ON CardDB._id=CollectionDB.card_id INNER JOIN UserDB ON  " +
             "UserDB._id=CollectionDB.card_id WHERE  CardDB._id=:cardId")
-    List<UserDB> getUsersForRepository(final int cardId);
+    List<UserDB> getUsersForRepository(final int cardId);*/
 }
