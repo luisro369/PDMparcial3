@@ -19,7 +19,7 @@ public class AlbumDB {
     private long idAlbum;
 
     @ColumnInfo (name = "NombreAlbum")
-    private String nombreAlbum
+    private String nombreAlbum;
     @ColumnInfo (name ="IdJuego")
     private long IdJuego;
 
