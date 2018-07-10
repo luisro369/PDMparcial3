@@ -35,11 +35,22 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:27.1.1'
     implementation 'com.android.support:cardview-v7:27.1.1'
     implementation 'com.android.support:palette-v7:27.1.1'
-    implementation 'com.android.support:design:27.1.1'
 
-    def room_version = "1.1.0"
-    implementation "android.arch.persistence.room:runtime:$room_version"
-    annotationProcessor "android.arch.persistence.room:compiler:$room_version"
+    //RxJava
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.7'
 
-    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    // RxJava support for Room
+    implementation "android.arch.persistence.room:rxjava2:$rootProject.roomVersion"
+    // Testing support
+    androidTestImplementation "android.arch.core:core-testing:$rootProject.roomVersion"
+
+    // Room components
+    implementation "android.arch.persistence.room:runtime:$rootProject.roomVersion"
+    annotationProcessor "android.arch.persistence.room:compiler:$rootProject.roomVersion"
+    androidTestImplementation "android.arch.persistence.room:testing:$rootProject.roomVersion"
+
+    // Lifecycle components
+    implementation "android.arch.lifecycle:extensions:$rootProject.archLifecycleVersion"
+    annotationProcessor "android.arch.lifecycle:compiler:$rootProject.archLifecycleVersion"
 }
