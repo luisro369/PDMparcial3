@@ -22,6 +22,10 @@ public class UserApi {
     @Expose
     private String password;
 
+    @SerializedName("userCards")
+    @Expose
+    private CardApi[] userCards;
+
     @SerializedName("firstName")
     @Expose
     private String firstName;
