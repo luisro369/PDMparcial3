@@ -18,19 +18,24 @@ import android.support.annotation.NonNull;
                 parentColumns = "_id",
                 childColumns = "card_id")
 })
+
 public class CollectionDB {
     @PrimaryKey
     @NonNull
-    @ColumnInfo(name = "_id")
-    private String Id;
+    @ColumnInfo(name = "_id1")
+    private String Id1;
+
+    @ColumnInfo (name = "_id2")
+    private String Id2;
+
     @ColumnInfo(name = "user_id")
     private String UserId;
     @ColumnInfo(name = "card_id")
     private String CardId;
 
     @NonNull
-    public String getId() {
-        return Id;
+    public String getId1() {
+        return Id1;
     }
 
     public String getUserId() {
@@ -41,8 +46,16 @@ public class CollectionDB {
         return CardId;
     }
 
-    public void setId(@NonNull String id) {
-        Id = id;
+    public void setId1(@NonNull String id1) {
+        Id1 = id1;
+    }
+
+    public String getId2() {
+        return Id2;
+    }
+
+    public void setId2(String id2) {
+        Id2 = id2;
     }
 
     public void setUserId(String userId) {

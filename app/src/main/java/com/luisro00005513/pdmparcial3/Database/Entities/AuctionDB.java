@@ -2,64 +2,72 @@ package com.luisro00005513.pdmparcial3.Database.Entities;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
 
 /**
  * Created by Karla on 10/7/2018.
  */
 
-@Entity
+@Entity(foreignKeys = {
+        @ForeignKey(entity = CollectionDB.class,
+                parentColumns = "_id1",
+                childColumns = "collection_id")
+})
+
 public class AuctionDB {
 
+    @NonNull
     @PrimaryKey
-    @ColumnInfo (name = "IdAuction")
-    private long idauction;
+    @ColumnInfo (name = "idauction")
+    private long IdAuction;
 
-    @ColumnInfo (name = "Time")
-    private String time;
+    @ColumnInfo (name = "time")
+    private String Time;
 
-    @ColumnInfo (name = "InitialPrice")
-    private String initialprice;
+    @ColumnInfo (name = "initialprice")
+    private String InitialPrice;
 
     @ColumnInfo(name = "FinalPrice")
-    private String finalprice;
+    private String FinalPrice;
 
-    public AuctionDB(long idauction, String time, String initialprice, String finalprice) {
-        this.idauction = idauction;
-        this.time = time;
-        this.initialprice = initialprice;
-        this.finalprice = finalprice;
+    public AuctionDB(long idAuction, String time, String initialPrice, String finalPrice) {
+        IdAuction = idAuction;
+        Time = time;
+        InitialPrice = initialPrice;
+        FinalPrice = finalPrice;
     }
 
-    public long getIdauction() {
-        return idauction;
+    public long getIdAuction() {
+        return IdAuction;
     }
 
-    public void setIdauction(long idauction) {
-        this.idauction = idauction;
+    public void setIdAuction(long idAuction) {
+        IdAuction = idAuction;
     }
 
     public String getTime() {
-        return time;
+        return Time;
     }
 
     public void setTime(String time) {
-        this.time = time;
+        Time = time;
     }
 
-    public String getInitialprice() {
-        return initialprice;
+    public String getInitialPrice() {
+        return InitialPrice;
     }
 
-    public void setInitialprice(String initialprice) {
-        this.initialprice = initialprice;
+    public void setInitialPrice(String initialPrice) {
+        InitialPrice = initialPrice;
     }
 
-    public String getFinalprice() {
-        return finalprice;
+    public String getFinalPrice() {
+        return FinalPrice;
     }
 
-    public void setFinalprice(String finalprice) {
-        this.finalprice = finalprice;
+    public void setFinalPrice(String finalPrice) {
+        FinalPrice = finalPrice;
     }
 }
