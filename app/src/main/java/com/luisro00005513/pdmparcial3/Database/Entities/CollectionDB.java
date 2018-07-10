@@ -20,13 +20,10 @@ import android.support.annotation.NonNull;
 })
 
 public class CollectionDB {
-    @PrimaryKey
+    @PrimaryKey (autoGenerate = true)
     @NonNull
     @ColumnInfo(name = "_id1")
     private String Id1;
-
-    @ColumnInfo (name = "_id2")
-    private String Id2;
 
     @ColumnInfo(name = "user_id")
     private String UserId;
@@ -52,13 +49,6 @@ public class CollectionDB {
         Id1 = id1;
     }
 
-    public String getId2() {
-        return Id2;
-    }
-
-    public void setId2(String id2) {
-        Id2 = id2;
-    }
 
     public void setUserId(String userId) {
         UserId = userId;

@@ -13,10 +13,7 @@ import android.support.annotation.NonNull;
 @Entity(foreignKeys = {
         @ForeignKey(entity = CollectionDB.class,
                 parentColumns = "_id1",
-                childColumns = "collection_id1"),
-        @ForeignKey(entity = CollectionDB.class,
-                parentColumns = "_id2",
-                childColumns = "collection_id2")
+                childColumns = "collection_id1")
 })
 
 public class ExchangeDB {
