@@ -31,11 +31,17 @@ public class SplashScreenActivity extends AppCompatActivity {
                 }catch (InterruptedException interruptedException){
                     interruptedException.printStackTrace();
                 }finally {
+                    islogin();
 
                 }
             }
         };
         timer.start();
+    }
+
+    public void islogin(){
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 
 }
