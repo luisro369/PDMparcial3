@@ -19,7 +19,9 @@ public class AppViewModel extends AndroidViewModel {
 
 
     //TODOS LOS METODOS DE API Y BASE DE DATOS
-
+    public String token(String user, String password){
+        return mRepository.getToken(user, password);
+    }
 
 
 }

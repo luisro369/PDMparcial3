@@ -8,6 +8,8 @@ import okhttp3.Request;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import static com.luisro00005513.pdmparcial3.ViewModels.AppRepository.token;
+
 /**
  * {@link RetrofitServices}
  * Esta clase permite conectar retrofit con los servicios API e implementar los métodos de la interfaz en cualquier
@@ -15,10 +17,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class RetrofitServices{
-    public static String token;
-    public static final String BASE_URL = "https://xover-api.herokuapp.com";
+    public static final String BASE_URL = "https://gamenewsuca.herokuapp.com";
+    //public static final String BASE_URL = "https://xover-api.herokuapp.com";
+    private RetrofitService retrofitService;
 
-    public RetrofitService conectar(){
+    public void conectar(){
         //--------------conexion retrofit--------------------
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(new Interceptor() {
             @Override
@@ -30,13 +33,18 @@ public class RetrofitServices{
             }
         }).build();
 
+
         Retrofit.Builder buider = new Retrofit.Builder()
+                .client(client)
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create());
         Retrofit retrofit = buider.build();
-        RetrofitService retrofitService = retrofit.create(RetrofitService.class);
-        return retrofitService;
+        retrofitService = retrofit.create(RetrofitService.class);
 
         //--------------conexion retrofit--------------------
     }//conectar
- }
+
+    public RetrofitService getRetrofitService() {
+        return retrofitService;
+    }
+}
