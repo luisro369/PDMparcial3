@@ -27,8 +27,8 @@ public class CollectionDB {
     private String UserId;
     @ColumnInfo(name = "card_id")
     private String CardId;
-    @ColumnInfo (name = "estado")
-    private String Estado;
+    @ColumnInfo (name = "state")
+    private String State;
 
     @NonNull
     public String getId() {
@@ -55,11 +55,11 @@ public class CollectionDB {
         CardId = cardId;
     }
 
-    public String getEstado() {
-        return Estado;
+    public String getState() {
+        return State;
     }
 
-    public void setEstado(String estado) {
-        Estado = estado;
+    public void setState(String state) {
+        State = state;
     }
 }
