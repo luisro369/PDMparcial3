@@ -2,12 +2,17 @@ package com.luisro00005513.pdmparcial3.Database.Entities;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.PrimaryKey;
 
 /**
  * Created by UCA on 10/07/2018.
  */
-@Entity
+@Entity(foreignKeys = {
+        @ForeignKey(entity = AlbumDB.class,
+                parentColumns = "_id",
+                childColumns = "id_album")
+})
 public class CardDB {
     @PrimaryKey
     @ColumnInfo(name = "_id")
@@ -28,8 +33,11 @@ public class CardDB {
     @ColumnInfo(name = "type")
     private String CardType;
 
-    @ColumnInfo(name = "state")
-    private String CardState;
+    @ColumnInfo(name = "rarity")
+    private String Rarity;
+
+    @ColumnInfo(name = "base_price")
+    private String BasePrice;
 
     public Long getCardId() {
         return CardId;
@@ -79,11 +87,19 @@ public class CardDB {
         CardType = cardType;
     }
 
-    public String getCardState() {
-        return CardState;
+    public String getRarity() {
+        return Rarity;
     }
 
-    public void setCardState(String cardState) {
-        CardState = cardState;
+    public String getBasePrice() {
+        return BasePrice;
+    }
+
+    public void setRarity(String rarity) {
+        Rarity = rarity;
+    }
+
+    public void setBasePrice(String basePrice) {
+        BasePrice = basePrice;
     }
 }
