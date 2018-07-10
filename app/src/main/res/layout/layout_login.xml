@@ -18,6 +18,8 @@
             android:layout_centerHorizontal="true"/>
 
         <EditText
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
             android:id="@+id/login_editText_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -29,6 +31,8 @@
             android:padding="8dp"/>
 
         <EditText
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
             android:id="@+id/login_editText_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

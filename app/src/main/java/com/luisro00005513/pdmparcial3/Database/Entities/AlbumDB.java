@@ -7,9 +7,9 @@ import android.support.annotation.NonNull;
 
 import retrofit2.http.Field;
 
-/**
- * Created by UCA on 10/07/2018.
- */
+
+
+
 @Entity
 public class AlbumDB {
 
