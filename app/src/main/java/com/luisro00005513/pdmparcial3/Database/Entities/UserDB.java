@@ -12,19 +12,19 @@ import android.support.annotation.NonNull;
 public class UserDB {
     @NonNull
     @PrimaryKey
-    @ColumnInfo (name = "Id")
+    @ColumnInfo (name = "_id")
     private long Id;
-    @ColumnInfo (name = "Username")
+    @ColumnInfo (name = "username")
     private String Username;
-    @ColumnInfo (name = "Password")
+    @ColumnInfo (name = "password")
     private String Password;
-    @ColumnInfo(name = "FirstName")
+    @ColumnInfo(name = "firstName")
     private String FirstName;
-    @ColumnInfo (name = "LastName")
+    @ColumnInfo (name = "lastName")
     private String LastName;
-    @ColumnInfo (name = "PhoneNumber")
+    @ColumnInfo (name = "phone_number")
     private String PhoneNumber;
-    @ColumnInfo (name = "Email")
+    @ColumnInfo (name = "email")
     private String Email;
 
     @NonNull
