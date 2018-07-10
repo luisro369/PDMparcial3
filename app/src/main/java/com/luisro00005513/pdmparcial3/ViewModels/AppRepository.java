@@ -27,6 +27,8 @@ public class AppRepository {
 
     //Instanciar database e instanciar retrofit
     private AppRepository(Application application) {
+        RetrofitServices retrofitServices = new RetrofitServices();
+        retrofitServices.conectar();
 
     }
 

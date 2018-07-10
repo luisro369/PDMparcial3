@@ -20,4 +20,6 @@ public class AppViewModel extends AndroidViewModel {
 
     //TODOS LOS METODOS DE API Y BASE DE DATOS
 
+
+
 }
