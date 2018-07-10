@@ -13,6 +13,8 @@ import com.luisro00005513.pdmparcial3.Database.Entities.UserDB;
 
 import java.util.List;
 
+import io.reactivex.Flowable;
+
 /**
  * Created by UCA on 10/07/2018.
  */
@@ -33,9 +35,17 @@ public interface CardDAO {
     void update(CardDB... cardDBS);
 
 
-    //Sacar las cartas de los usuarios
-    @Query("SELECT CardDB.`desc`, CardDB.image,CardDB.state ,CardDB.title, CardDB.type FROM UserDB INNER JOIN CollectionDB ON UserDB._id=CollectionDB.user_id INNER JOIN CardDB ON " +
+    //Sacar las cartas segun un usuario
+    @Query("SELECT CardDB.* FROM UserDB INNER JOIN CollectionDB ON UserDB._id=CollectionDB.user_id INNER JOIN CardDB ON " +
             "CardDB._id=CollectionDB.card_id WHERE  UserDB._id=:userId")
-    List<CardDB> getUsersForRepository(final int userId);
+    Flowable<List<CardDB>> getCardsByUser(final long userId);
 
+    //Sacar las cartas segun un usuario y un tipo de carta
+    @Query("SELECT CardDB.* FROM UserDB INNER JOIN CollectionDB ON UserDB._id=CollectionDB.user_id INNER JOIN CardDB ON " +
+            "CardDB._id=CollectionDB.card_id WHERE  UserDB._id=:userId AND CardDB.id_album=:albumid")
+    Flowable<List<CardDB>> getCardsByUser(final long userId, final long albumid);
+
+    //Sacar cartas segun un album
+    @Query("SELECT * FROM CardDB WHERE CardDB.id_album=:albumid")
+    Flowable<List<CardDB>> getCardsByAlbumUser(final long albumid);
 }

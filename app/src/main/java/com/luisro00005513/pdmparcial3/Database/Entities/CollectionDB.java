@@ -32,6 +32,8 @@ public class CollectionDB {
     private String UserId;
     @ColumnInfo(name = "card_id")
     private String CardId;
+    @ColumnInfo (name = "state")
+    private String State;
 
     @NonNull
     public String getId1() {
@@ -64,5 +66,13 @@ public class CollectionDB {
 
     public void setCardId(String cardId) {
         CardId = cardId;
+    }
+
+    public String getState() {
+        return State;
+    }
+
+    public void setState(String state) {
+        State = state;
     }
 }
