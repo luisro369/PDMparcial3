@@ -10,7 +10,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class RetrofitServices{
-    public static final String BASE_URL = "https://xover-api.herokuapp.com";
+    public static final String BASE_URL = "https://gamenewsuca.herokuapp.com";
+    //public static final String BASE_URL = "https://xover-api.herokuapp.com";
 
     public RetrofitService conectar(){
         //--------------conexion retrofit--------------------
