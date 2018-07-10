@@ -1,11 +1,14 @@
 package com.luisro00005513.pdmparcial3.Database.DAO;
 
 import android.arch.persistence.room.Dao;
+import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.OnConflictStrategy;
 import android.arch.persistence.room.Query;
+import android.arch.persistence.room.Update;
 
 import com.luisro00005513.pdmparcial3.Database.Entities.AlbumDB;
+import com.luisro00005513.pdmparcial3.Database.Entities.CardDB;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +19,19 @@ import java.util.List;
 
 @Dao
 public interface AlbumDAO {
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    void insert(AlbumDB... albumDB);
+
+    @Query("DELETE FROM albumDB")
+    void DeleteAllCards();
+
+    @Delete
+    void delete(AlbumDB albumDB);
+
+    @Update
+    void update(AlbumDB... albumDB);
+
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertAlbumList(List<AlbumDB> albumList);
 
