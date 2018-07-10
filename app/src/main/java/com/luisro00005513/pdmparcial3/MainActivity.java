@@ -74,13 +74,6 @@ public class MainActivity extends AppCompatActivity {
         viewModel = ViewModelProviders.of(this).get(AppViewModel.class);
         viewModel.token("00117716","00117716");
 
-<<<<<<< HEAD
-        Thread thread = new Thread(){
-            public void run(){
-                List<UserApi> listaDeUsuarios = viewModel.users();
-            }//run in backgorund
-        };thread.start();
-=======
         /*Hilo principal*/
         viewModel.users().observeOn(AndroidSchedulers.mainThread()).subscribe((userApis, throwable) -> {
 
@@ -91,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
          */
 
         //List<UserApi> listaDeUsuarios = viewModel.users();
->>>>>>> eea8d7a96dfc95fe0c2a04c219b8675157b283ed
         //List<CardApi> listaDeCartas = viewModel.cards();
     }//on create
 
