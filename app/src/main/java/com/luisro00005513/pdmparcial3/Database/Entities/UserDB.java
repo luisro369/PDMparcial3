@@ -16,4 +16,72 @@ public class UserDB {
     private long Id;
     @ColumnInfo (name = "username")
     private String Username;
+    @ColumnInfo (name = "password")
+    private String Password;
+    @ColumnInfo(name = "firstName")
+    private String FirstName;
+    @ColumnInfo (name = "lastName")
+    private String LastName;
+    @ColumnInfo (name = "phone_number")
+    private String PhoneNumber;
+    @ColumnInfo (name = "email")
+    private String Email;
+
+    @NonNull
+    public long getId() {
+        return Id;
+    }
+
+    public String getUsername() {
+        return Username;
+    }
+
+    public String getPassword() {
+        return Password;
+    }
+
+    public String getFirstName() {
+        return FirstName;
+    }
+
+    public String getLastName() {
+        return LastName;
+    }
+
+
+    public String getPhoneNumber() {
+        return PhoneNumber;
+    }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setId(@NonNull long id) {
+        Id = id;
+    }
+
+    public void setUsername(String username) {
+        Username = username;
+    }
+
+    public void setPassword(String password) {
+        Password = password;
+    }
+
+    public void setFirstName(String firstName) {
+        FirstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        LastName = lastName;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        PhoneNumber = phoneNumber;
+    }
+
+    public void setEmail(String email) {
+        Email = email;
+    }
 }

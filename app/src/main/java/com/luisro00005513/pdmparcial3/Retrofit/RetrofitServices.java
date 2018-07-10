@@ -4,8 +4,11 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * Created by luisro on 7/10/18.
+ * {@link RetrofitServices}
+ * Esta clase permite conectar retrofit con los servicios API e implementar los métodos de la interfaz en cualquier
+ * parte del código.
  */
+
 public class RetrofitServices{
     //public static final String BASE_URL = "http://localhost:3000";
     //public static final String BASE_URL = "http://192.168.0.28:3000";//wifi
