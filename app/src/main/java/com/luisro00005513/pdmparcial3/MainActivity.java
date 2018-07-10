@@ -72,12 +72,7 @@ public class MainActivity extends AppCompatActivity {
 */
         //===================modelo de appViewModel=======================
         viewModel = ViewModelProviders.of(this).get(AppViewModel.class);
-        viewModel.token("00117716","00117716");
 
-        /*Hilo principal*/
-        viewModel.users().observeOn(AndroidSchedulers.mainThread()).subscribe((userApis, throwable) -> {
-
-        });
         /*Hilo atrás
         viewModel.users().subscribe((userApis, throwable) -> {
         });

@@ -25,11 +25,17 @@ public interface CardDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insert(CardDB... cardDBS);
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    void insert(List<CardDB> cardDBS);
+
     @Query("DELETE FROM CardDB")
     void DeleteAllCards();
 
     @Delete
-    void delete(CardDB cardDB);
+    void delete(CardDB... cardDB);
+
+    @Delete
+    void delete(List<CardDB> cardDB);
 
     @Update
     void update(CardDB... cardDBS);
@@ -40,12 +46,12 @@ public interface CardDAO {
             "CardDB._id=CollectionDB.card_id WHERE  UserDB._id=:userId")
     Flowable<List<CardDB>> getCardsByUser(final long userId);
 
-    //Sacar las cartas segun un usuario y un tipo de carta
+    //Sacar las cartas segun un usuario y un album
     @Query("SELECT CardDB.* FROM UserDB INNER JOIN CollectionDB ON UserDB._id=CollectionDB.user_id INNER JOIN CardDB ON " +
             "CardDB._id=CollectionDB.card_id WHERE  UserDB._id=:userId AND CardDB.id_album=:albumid")
-    Flowable<List<CardDB>> getCardsByUser(final long userId, final long albumid);
+    Flowable<List<CardDB>> getCardsByUserAlbum(final long userId, final long albumid);
 
     //Sacar cartas segun un album
     @Query("SELECT * FROM CardDB WHERE CardDB.id_album=:albumid")
-    Flowable<List<CardDB>> getCardsByAlbumUser(final long albumid);
+    Flowable<List<CardDB>> getCardsByAlbum(final long albumid);
 }

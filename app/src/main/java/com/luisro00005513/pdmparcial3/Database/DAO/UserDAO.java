@@ -25,19 +25,23 @@ public interface UserDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insert(UserDB... userDBS);
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    void insert(List<UserDB> userDBS);
+
     @Query("DELETE FROM UserDB")
     void DeleteAllUsers();
 
     @Delete
-    void delete(UserDB userDB);
+    void delete(UserDB... userDB);
 
     @Update
     void update(UserDB... userDBS);
 
-    //Sacar el usuario de la carta
+    //Sacar el todos los usuario que tienen una carta
     @Query("SELECT UserDB.*  FROM CardDB INNER JOIN CollectionDB ON CardDB._id=CollectionDB.card_id INNER JOIN UserDB ON  " +
             "UserDB._id=CollectionDB.card_id WHERE  CardDB._id=:cardId")
     Flowable<List<UserDB>> getUsersByCardRepository(final long cardId);
+
 
 
 }

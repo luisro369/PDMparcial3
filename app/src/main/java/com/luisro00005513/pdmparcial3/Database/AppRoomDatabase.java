@@ -41,4 +41,5 @@ public abstract class AppRoomDatabase extends RoomDatabase {
     public abstract AlbumDAO albumDAO();
     public abstract CardDAO cardDAO();
     public abstract UserDAO userDAO();
+    public abstract CollectionDAO collectionDAO();
 }
