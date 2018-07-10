@@ -16,6 +16,8 @@ public class SplashScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_splash_screen);
 
+        title = findViewById(R.id.splash_textView_title);
+
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.transition_splash);
 
         title.startAnimation(animation);
