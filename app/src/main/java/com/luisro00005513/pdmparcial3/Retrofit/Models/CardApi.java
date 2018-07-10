@@ -1,12 +1,12 @@
 package com.luisro00005513.pdmparcial3.Retrofit.Models;
 
-/**
- * {@link CardApi}
- * Modelo de carta de la API
- */
-
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+/**
+ * {@link CardApi}
+ * Modelo de Card de la API
+ */
 
 public class CardApi {
 
