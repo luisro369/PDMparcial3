@@ -1,11 +1,12 @@
 package com.luisro00005513.pdmparcial3.Retrofit.Models;
 
-/**
- * Created by luisro on 7/10/18.
- */
-
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+/**
+ * {@link CardApi}
+ * Modelo de Card de la API
+ */
 
 public class CardApi {
 
