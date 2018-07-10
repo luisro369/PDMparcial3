@@ -44,10 +44,10 @@ public interface AlbumDAO {
     @Query("SELECT * FROM AlbumDB WHERE game = :gamename")
     Flowable<List<AlbumDB>> getAlbumbyGame(String gamename);
 
-    @Query("SELECT * FROM AlbumDB WHERE albumname = :albumname")
+    @Query("SELECT * FROM AlbumDB WHERE game = :albumname")
     Single<AlbumDB> getAlbumbyName(String albumname);
 
-    @Query("SELECT * FROM AlbumDB WHERE IdAlbum = :idalbum")
+    @Query("SELECT * FROM AlbumDB WHERE _id = :idalbum")
     Single<AlbumDB> getAlbumbyId (String idalbum);
 
 }

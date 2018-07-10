@@ -34,10 +34,10 @@ public interface UserDAO {
     @Update
     void update(UserDB... userDBS);
 
-    //Sacar las cartas de los usuarios
-    @Query("SELECT UserDB.firstName, UserDB.lastName,UserDB.phone_number  FROM CardDB INNER JOIN CollectionDB ON CardDB._id=CollectionDB.card_id INNER JOIN UserDB ON  " +
+    //Sacar el usuario de la carta
+    @Query("SELECT UserDB.*  FROM CardDB INNER JOIN CollectionDB ON CardDB._id=CollectionDB.card_id INNER JOIN UserDB ON  " +
             "UserDB._id=CollectionDB.card_id WHERE  CardDB._id=:cardId")
-    Flowable<List<UserDB>> getUsersForRepository(final int cardId);
+    Flowable<List<UserDB>> getUsersByCardRepository(final long cardId);
 
 
 }

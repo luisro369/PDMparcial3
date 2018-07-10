@@ -2,12 +2,17 @@ package com.luisro00005513.pdmparcial3.Database.Entities;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.PrimaryKey;
 
 /**
  * Created by UCA on 10/07/2018.
  */
-@Entity
+@Entity(foreignKeys = {
+        @ForeignKey(entity = AlbumDB.class,
+                parentColumns = "_id",
+                childColumns = "id_album")
+})
 public class CardDB {
     @PrimaryKey
     @ColumnInfo(name = "_id")
