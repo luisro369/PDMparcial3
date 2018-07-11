@@ -28,7 +28,7 @@ public interface CollectionDAO {
     void insert(List<CollectionDB> news);
 
     @Query("SELECT * FROM CollectionDB WHERE user_id = :userId")
-    Flowable<List<CollectionDB>> getUserCollections(long userId);
+    Flowable<List<CollectionDB>> getUserCollections(String userId);
 
     @Query("DELETE FROM CollectionDB")
     void DeleteAllCollection();

@@ -127,11 +127,11 @@ public class AppRepository {
                 .observeOn(Schedulers.io());
     }
 
-    public Flowable<List<UserDB>> getUsersOwnCardDB(long cardId) {
+    public Flowable<List<UserDB>> getUsersOwnCardDB(String cardId) {
         return db.userDAO().getUsersByCardRepository(cardId);
     }
 
-    public Completable insertCardsToUserDB(long userID, String state, CardDB... cardDBS) {
+    public Completable insertCardsToUserDB(String userID, String state, CardDB... cardDBS) {
         ArrayList<CollectionDB> collectionDBS = new ArrayList<>();
         for (CardDB cardDB : cardDBS) {
             CollectionDB coll = new CollectionDB();
@@ -150,7 +150,7 @@ public class AppRepository {
 
     }
 
-    public Flowable<List<CollectionDB>> getUserCollectionsDB (long userId) {
+    public Flowable<List<CollectionDB>> getUserCollectionsDB (String userId) {
         return db.collectionDAO().getUserCollections(userId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io());
@@ -245,19 +245,19 @@ public class AppRepository {
                 .observeOn(Schedulers.io());
     }
 
-    public Flowable<List<CardDB>> getCardsByUserId(long userId) {
+    public Flowable<List<CardDB>> getCardsByUserId(String userId) {
         return db.cardDAO().getCardsByUser(userId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io());
 
     }
-    public Flowable<List<CardDB>> getCardsByUserAlbum(long userId, long albumid) {
+    public Flowable<List<CardDB>> getCardsByUserAlbum(String userId, String albumid) {
         return db.cardDAO().getCardsByUserAlbum(userId,albumid)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io());
 
     }
-    public Flowable<List<CardDB>> getCardsByAlbum(long albumId) {
+    public Flowable<List<CardDB>> getCardsByAlbum(String albumId) {
         return db.cardDAO().getCardsByAlbum(albumId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io());
@@ -326,7 +326,7 @@ public class AppRepository {
                 .observeOn(Schedulers.io());
 
     }
-    public Single<AlbumDB> getAlbumById(long albumid) {
+    public Single<AlbumDB> getAlbumById(String albumid) {
         return db.albumDAO().getAlbumbyId(albumid)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io());

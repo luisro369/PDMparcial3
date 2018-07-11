@@ -25,9 +25,9 @@ public class CollectionDB {
     @ColumnInfo(name = "_id")
     private long Id;
     @ColumnInfo(name = "user_id")
-    private long UserId;
+    private String UserId;
     @ColumnInfo(name = "card_id")
-    private long CardId;
+    private String CardId;
     @ColumnInfo (name = "state")
     private String State;
 
@@ -36,11 +36,11 @@ public class CollectionDB {
         return Id;
     }
 
-    public long getUserId() {
+    public String getUserId() {
         return UserId;
     }
 
-    public long getCardId() {
+    public String getCardId() {
         return CardId;
     }
 
@@ -52,11 +52,11 @@ public class CollectionDB {
         Id = id;
     }
 
-    public void setUserId(long userId) {
+    public void setUserId(String userId) {
         UserId = userId;
     }
 
-    public void setCardId(long cardId) {
+    public void setCardId(String cardId) {
         CardId = cardId;
     }
 

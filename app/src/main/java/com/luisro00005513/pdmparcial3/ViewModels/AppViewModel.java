@@ -47,29 +47,29 @@ public class AppViewModel extends AndroidViewModel {
     //DATABSE
 
     //cards
-    public Flowable<List<CardDB>> getCardsByUser(long userId) {
+    public Flowable<List<CardDB>> getCardsByUser(String userId) {
         return mRepository.getCardsByUserId(userId)
                 .observeOn(AndroidSchedulers.mainThread());
     }
 
-    public Flowable<List<UserDB>> getUsersOwnCard(long cardId) {
+    public Flowable<List<UserDB>> getUsersOwnCard(String cardId) {
         return mRepository.getUsersOwnCardDB(cardId)
                 .observeOn(AndroidSchedulers.mainThread());
     }
 
-    public Flowable<List<CollectionDB>> getUserCollections (long userId) {
+    public Flowable<List<CollectionDB>> getUserCollections (String userId) {
         return mRepository.getUserCollectionsDB(userId)
                 .observeOn(AndroidSchedulers.mainThread());
     }
-    public Flowable<List<CardDB>> getCardsByUserId (long userId) {
+    public Flowable<List<CardDB>> getCardsByUserId (String userId) {
         return mRepository.getCardsByUserId(userId)
                 .observeOn(AndroidSchedulers.mainThread());
     }
-    public Flowable<List<CardDB>> getCardsByUserAlbum (long userId, long albumId) {
+    public Flowable<List<CardDB>> getCardsByUserAlbum (String userId, String albumId) {
         return mRepository.getCardsByUserAlbum(userId, albumId)
                 .observeOn(AndroidSchedulers.mainThread());
     }
-    public Flowable<List<CardDB>> getCardsByAlbum (long albumId) {
+    public Flowable<List<CardDB>> getCardsByAlbum (String albumId) {
         return mRepository.getCardsByUserId(albumId)
                 .observeOn(AndroidSchedulers.mainThread());
     }
@@ -105,7 +105,7 @@ public class AppViewModel extends AndroidViewModel {
         return mRepository.getAlbumByName(albumname)
                 .observeOn(AndroidSchedulers.mainThread());
     }
-    public Single<AlbumDB> getAlbumById(long albumid) {
+    public Single<AlbumDB> getAlbumById(String albumid) {
         return mRepository.getAlbumById(albumid)
                 .observeOn(AndroidSchedulers.mainThread());
     }

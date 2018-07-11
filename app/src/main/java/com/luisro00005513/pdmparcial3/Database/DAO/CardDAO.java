@@ -44,14 +44,14 @@ public interface CardDAO {
     //Sacar las cartas segun un usuario
     @Query("SELECT CardDB.* FROM UserDB INNER JOIN CollectionDB ON UserDB._id=CollectionDB.user_id INNER JOIN CardDB ON " +
             "CardDB._id=CollectionDB.card_id WHERE  UserDB._id=:userId")
-    Flowable<List<CardDB>> getCardsByUser(final long userId);
+    Flowable<List<CardDB>> getCardsByUser(final String userId);
 
     //Sacar las cartas segun un usuario y un album
     @Query("SELECT CardDB.* FROM UserDB INNER JOIN CollectionDB ON UserDB._id=CollectionDB.user_id INNER JOIN CardDB ON " +
             "CardDB._id=CollectionDB.card_id WHERE  UserDB._id=:userId AND CardDB.id_album=:albumid")
-    Flowable<List<CardDB>> getCardsByUserAlbum(final long userId, final long albumid);
+    Flowable<List<CardDB>> getCardsByUserAlbum(final String userId, final String albumid);
 
     //Sacar cartas segun un album
     @Query("SELECT * FROM CardDB WHERE CardDB.id_album=:albumid")
-    Flowable<List<CardDB>> getCardsByAlbum(final long albumid);
+    Flowable<List<CardDB>> getCardsByAlbum(final String albumid);
 }

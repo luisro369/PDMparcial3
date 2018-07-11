@@ -46,6 +46,6 @@ public interface AlbumDAO {
     Single<AlbumDB> getAlbumbyName(String albumname);
 
     @Query("SELECT * FROM AlbumDB WHERE _id = :idalbum")
-    Single<AlbumDB> getAlbumbyId (long idalbum);
+    Single<AlbumDB> getAlbumbyId (String idalbum);
 
 }

@@ -16,7 +16,7 @@ public class AlbumDB {
     @PrimaryKey
     @NonNull
     @ColumnInfo (name="_id")
-    private long idAlbum;
+    private String idAlbum;
 
     @ColumnInfo (name = "album_name")
     private String albumName;
@@ -24,11 +24,11 @@ public class AlbumDB {
     private String game;
 
     @NonNull
-    public long getIdAlbum() {
+    public String getIdAlbum() {
         return idAlbum;
     }
 
-    public void setIdAlbum(@NonNull long idAlbum) {
+    public void setIdAlbum(@NonNull String idAlbum) {
         this.idAlbum = idAlbum;
     }
 

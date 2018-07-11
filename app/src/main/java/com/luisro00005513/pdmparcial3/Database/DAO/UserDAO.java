@@ -40,7 +40,7 @@ public interface UserDAO {
     //Sacar el todos los usuario que tienen una carta
     @Query("SELECT UserDB.*  FROM CardDB INNER JOIN CollectionDB ON CardDB._id=CollectionDB.card_id INNER JOIN UserDB ON  " +
             "UserDB._id=CollectionDB.card_id WHERE  CardDB._id=:cardId")
-    Flowable<List<UserDB>> getUsersByCardRepository(final long cardId);
+    Flowable<List<UserDB>> getUsersByCardRepository(final String cardId);
 
 
 

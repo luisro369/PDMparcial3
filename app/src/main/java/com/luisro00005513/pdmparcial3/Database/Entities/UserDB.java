@@ -13,7 +13,7 @@ public class UserDB {
     @NonNull
     @PrimaryKey
     @ColumnInfo (name = "_id")
-    private long Id;
+    private String Id;
     @ColumnInfo (name = "username")
     private String Username;
     @ColumnInfo (name = "password")
@@ -28,7 +28,7 @@ public class UserDB {
     private String Email;
 
     @NonNull
-    public long getId() {
+    public String getId() {
         return Id;
     }
 
@@ -57,7 +57,7 @@ public class UserDB {
         return Email;
     }
 
-    public void setId(@NonNull long id) {
+    public void setId(@NonNull String id) {
         Id = id;
     }
 

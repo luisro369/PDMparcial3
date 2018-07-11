@@ -6,6 +6,8 @@ import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 
+import io.reactivex.annotations.NonNull;
+
 /**
  * Created by UCA on 10/07/2018.
  */
@@ -17,7 +19,8 @@ import android.arch.persistence.room.PrimaryKey;
 public class CardDB {
     @PrimaryKey
     @ColumnInfo(name = "_id")
-    private Long CardId;
+    @android.support.annotation.NonNull
+    private String CardId;
 
     @ColumnInfo(name = "title")
     private String CardTitle;
@@ -40,11 +43,11 @@ public class CardDB {
     @ColumnInfo(name = "base_price")
     private String BasePrice;
 
-    public Long getCardId() {
+    public String getCardId() {
         return CardId;
     }
 
-    public void setCardId(Long cardId) {
+    public void setCardId(String cardId) {
         CardId = cardId;
     }
 
