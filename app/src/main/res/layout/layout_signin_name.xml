@@ -16,13 +16,13 @@
 
         <ImageView
             android:id="@+id/signIn_imageView_logo"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="4dp"
             android:layout_marginTop="5dp"
             android:contentDescription="@string/text_logo"
-            android:src="@color/colorPrimary" />
+            android:src="@drawable/logo" />
 
 
         <TextView
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/signIn_imageView_logo"
             android:layout_centerInParent="true"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="20dp"
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:text="Sign In"
@@ -41,6 +41,8 @@
 
         <EditText
             android:id="@+id/signIn_editText_firstName"
+            android:background="@drawable/shape_edit_text"
+            android:padding="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/signIn_textView_titulo"
@@ -50,6 +52,8 @@
         <EditText
             android:id="@+id/signIn_editText_lastName"
             android:layout_width="match_parent"
+            android:padding="8dp"
+            android:background="@drawable/shape_edit_text"
             android:layout_height="wrap_content"
             android:layout_below="@id/signIn_editText_firstName"
             android:layout_marginBottom="25dp"
@@ -59,6 +63,8 @@
             android:id="@+id/signIn_editText_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/shape_edit_text"
+            android:padding="8dp"
             android:layout_below="@id/signIn_editText_lastName"
             android:layout_marginBottom="25dp"
             android:hint="Email" />
@@ -66,6 +72,8 @@
         <EditText
             android:id="@+id/signIn_editText_phone"
             android:layout_width="match_parent"
+            android:padding="8dp"
+            android:background="@drawable/shape_edit_text"
             android:layout_below="@id/signIn_editText_email"
             android:layout_height="wrap_content"
             android:hint="Phone"
@@ -75,6 +83,8 @@
         <Button
             android:id="@+id/signIn_button_next"
             android:layout_width="100dp"
+            android:textStyle="bold"
+            android:background="@drawable/borde_btn"
             android:layout_height="wrap_content"
             android:layout_below="@id/signIn_editText_phone"
             android:layout_centerInParent="true"

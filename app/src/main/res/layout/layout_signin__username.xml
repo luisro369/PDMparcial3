@@ -16,13 +16,13 @@
 
         <ImageView
             android:id="@+id/signIn_imageView_logo"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="16dp"
             android:layout_marginTop="5dp"
             android:contentDescription="@string/text_logo"
-            android:src="@color/colorPrimary" />
+            android:src="@drawable/logo" />
 
 
         <TextView
@@ -43,7 +43,9 @@
         <EditText
             android:id="@+id/signIn_EditText_username"
             android:layout_width="match_parent"
+            android:padding="8dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/shape_edit_text"
             android:layout_below="@id/signIn_textView_titulo"
             android:layout_marginBottom="25dp"
             android:hint="Username" />
@@ -51,6 +53,8 @@
         <EditText
             android:id="@+id/signIn_editText_password"
             android:layout_width="match_parent"
+            android:padding="8dp"
+            android:background="@drawable/shape_edit_text"
             android:layout_height="wrap_content"
             android:layout_below="@id/signIn_EditText_username"
             android:layout_marginBottom="25dp"
@@ -58,6 +62,8 @@
 
         <EditText
             android:id="@+id/signIn_EditText_ConfirmPassword"
+            android:padding="8dp"
+            android:background="@drawable/shape_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/signIn_editText_password"
@@ -69,6 +75,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/signIn_EditText_ConfirmPassword"
             android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:background="@drawable/borde_btn"
+
             android:layout_marginTop="25dp"
             android:text="Next" />
 
