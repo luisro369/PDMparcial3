@@ -20,56 +20,44 @@ import android.support.annotation.NonNull;
 })
 
 public class CollectionDB {
-    @PrimaryKey
+    @PrimaryKey (autoGenerate = true)
     @NonNull
-    @ColumnInfo(name = "_id1")
-    private String Id1;
-
-    @ColumnInfo (name = "_id2")
-    private String Id2;
-
+    @ColumnInfo(name = "_id")
+    private long Id;
     @ColumnInfo(name = "user_id")
-    private String UserId;
+    private long UserId;
     @ColumnInfo(name = "card_id")
-    private String CardId;
+    private long CardId;
     @ColumnInfo (name = "state")
     private String State;
 
     @NonNull
-    public String getId1() {
-        return Id1;
+    public long getId() {
+        return Id;
     }
 
-    public String getUserId() {
+    public long getUserId() {
         return UserId;
     }
 
-    public String getCardId() {
+    public long getCardId() {
         return CardId;
-    }
-
-    public void setId1(@NonNull String id1) {
-        Id1 = id1;
-    }
-
-    public String getId2() {
-        return Id2;
-    }
-
-    public void setId2(String id2) {
-        Id2 = id2;
-    }
-
-    public void setUserId(String userId) {
-        UserId = userId;
-    }
-
-    public void setCardId(String cardId) {
-        CardId = cardId;
     }
 
     public String getState() {
         return State;
+    }
+
+    public void setId(@NonNull long id) {
+        Id = id;
+    }
+
+    public void setUserId(long userId) {
+        UserId = userId;
+    }
+
+    public void setCardId(long cardId) {
+        CardId = cardId;
     }
 
     public void setState(String state) {
