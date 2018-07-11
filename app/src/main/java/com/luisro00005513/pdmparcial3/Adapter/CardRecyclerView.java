@@ -41,8 +41,6 @@ public class CardRecyclerView extends RecyclerView.Adapter<CardRecyclerView.MyVi
         final View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_cards, null, false);
         final MyViewModel myViewModel = new MyViewModel(view);
 
-
-
         myViewModel.item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,7 +64,7 @@ public class CardRecyclerView extends RecyclerView.Adapter<CardRecyclerView.MyVi
     @Override
     public void onBindViewHolder(@NonNull CardRecyclerView.MyViewModel holder, int position) {
 
-        holder.card.setImageResource(R.drawable.ic_account);
+        holder.card.setImageResource(R.drawable.mago);
 
 
 
