@@ -1,5 +1,6 @@
 package com.luisro00005513.pdmparcial3;
 
+import android.content.Context;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements
     public Fragment fragment_Login= new FragmentLogin();
     public Fragment fragment_Store=new Store_buy();
     private ViewPager viewPager;
+    public static Context context;
     private ViewPagerAdapter viewPagerAdapter;
     View view;
 
@@ -39,6 +41,8 @@ public class MainActivity extends AppCompatActivity implements
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPagerAdapter.addFragment(new Home_YGH(),"Home");
         viewPagerAdapter.addFragment(new Store_auction(), "Transfer");
+
+        context= getApplicationContext();
 
         NavBottom();
         if(savedInstanceState == null){

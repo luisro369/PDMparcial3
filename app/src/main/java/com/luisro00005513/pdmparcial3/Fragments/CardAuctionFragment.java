@@ -47,8 +47,8 @@ public class CardAuctionFragment  extends Fragment {
         private void llenado() {
 
             listCard.add(new CardDB("Carta 1", "Raro", "Descripcion", "urlImagen"));
-            listCard.add(new CardDB("Carta 1", "Raro", "Descripcion", "urlImagen"));
-            listCard.add(new CardDB("Carta 1", "Raro", "Descripcion", "urlImagen"));
+            listCard.add(new CardDB("Carta 2", "Extraña", "Descripcion", "urlImagen"));
+            listCard.add(new CardDB("Carta 3", "Epic", "Descripcion", "fornite"));
         }
 
 }
